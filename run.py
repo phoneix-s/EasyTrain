@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from flask import Flask,render_template,jsonify,redirect,url_for
 
 import json
@@ -109,7 +110,7 @@ def basenn_train_task():
     print("training_thread")
     print(global_varibles)
     print(basenn_shared_data)
-    basenn_running_process = subprocess.Popen(["..\env\python.exe","basenn_code.py"],stdout=subprocess.PIPE, stderr=subprocess.PIPE,encoding='gb18030')
+    basenn_running_process = subprocess.Popen(["..\env\python.exe","basenn_code.py"],stdout=subprocess.PIPE, stderr=subprocess.PIPE,encoding='utf-8')
     # 获取子进程输出
     basenn_poll_log_socket(basenn_running_process)
     basenn_running_process = None
